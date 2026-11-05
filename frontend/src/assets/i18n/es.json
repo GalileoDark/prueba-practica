@@ -1,0 +1,12 @@
+{
+  "LOGIN": {
+    "TITLE": "Inicia sesión en tu cuenta",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "SUBMIT": "ENTRAR",
+    "OTHER_METHODS": "Otras formas de acceso:",
+    "SSO_DECATHLON": "ENTRAR CON DECATHLON",
+    "NO_ACCOUNT": "¿No tienes cuenta?",
+    "REGISTER": "Regístrate"
+  }
+}
