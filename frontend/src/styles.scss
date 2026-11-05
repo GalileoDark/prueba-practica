@@ -1,4 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+// Plus imports for other components in your app.
+/*********************************************/
+@import "assets/scss/4-generic/_normalize";
+@import "assets/scss/4-generic/_reset";
+/*********************************************/
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//Add anything you need to use globally here
+//example: @import "assets/scss/4-generic/_typography";
+@import "assets/scss/1-settings/_variables";
+@import "assets/scss/3-tools/breakpoints";
+@import "assets/scss/3-tools/notouch-hover";
+@import "assets/scss/3-tools/fluid-type";
+@import "assets/scss/3-tools/nth-child";
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/fonts/Lato/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
