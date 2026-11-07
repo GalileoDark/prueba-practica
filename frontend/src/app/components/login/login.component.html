@@ -39,6 +39,14 @@
           <button mat-flat-button class="btn-submit" type="submit">
             {{ 'LOGIN.SUBMIT' | translate }}
           </button>
+          
+          <div *ngIf="successMessage" class="success-banner" style="color: #28a745; margin-bottom: 15px; font-size: 14px; font-weight: bold; text-align: center;">
+                {{ successMessage }}
+            </div>
+          <!-- Mensaje de error visual en la interfaz -->
+            <div *ngIf="errorMessage" class="error-banner" style="color: red; margin-bottom: 15px; font-size: 14px;">
+            {{ errorMessage }}
+            </div>
         </form>
 
         <div class="divider-text">
