@@ -1,4 +1,4 @@
-# Prueba Técnica Full-Stack: Spring Boot & Angular (RealDooh)
+# Prueba Técnica Full-Stack: Spring Boot & Angular
 
 Este repositorio contiene la solución completa para la prueba técnica de desarrollo full-stack, compuesta por un **backend en Spring Boot** y un **frontend en Angular**.
 
