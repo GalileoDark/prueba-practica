@@ -1,0 +1,84 @@
+<div class="login-container">
+  
+  <div class="login-body">
+    
+    <div class="login-left-banner">
+      <img src="assets/images/login.svg" alt="Ilustración Login" class="illustration-img">
+    </div>
+
+    <div class="login-right-form">
+      <div class="form-wrapper">
+        
+        <div class="logo-container">
+          <img src="assets/images/logos/Logo-RD.svg" alt="realdooh" class="brand-logo">
+        </div>
+
+        <h3 class="login-subtitle">{{ 'LOGIN.TITLE' | translate }}</h3>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'LOGIN.EMAIL' | translate }}</mat-label>
+            <input matInput type="email" formControlName="email" [placeholder]="'LOGIN.EMAIL' | translate">
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+              El correo es obligatorio
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+              Introduce un correo válido
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
+            <input matInput type="password" formControlName="password" [placeholder]="'LOGIN.PASSWORD' | translate">
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+              La contraseña es obligatoria
+            </mat-error>
+          </mat-form-field>
+
+          <button mat-flat-button class="btn-submit" type="submit">
+            {{ 'LOGIN.SUBMIT' | translate }}
+          </button>
+          
+          <div *ngIf="successMessage" class="success-banner" style="color: #28a745; margin-bottom: 15px; font-size: 14px; font-weight: bold; text-align: center;">
+                {{ successMessage }}
+            </div>
+          <!-- Mensaje de error visual en la interfaz -->
+            <div *ngIf="errorMessage" class="error-banner" style="color: red; margin-bottom: 15px; font-size: 14px;">
+            {{ errorMessage }}
+            </div>
+        </form>
+
+        <div class="divider-text">
+          <span>{{ 'LOGIN.OTHER_METHODS' | translate }}</span>
+        </div>
+
+        <button mat-flat-button class="btn-sso" (click)="onLoginSSO()">
+          {{ 'LOGIN.SSO_DECATHLON' | translate }}
+        </button>
+
+        <div class="register-link">
+          {{ 'LOGIN.NO_ACCOUNT' | translate }} <a href="#">{{ 'LOGIN.REGISTER' | translate }}</a>
+        </div>
+
+      </div>
+
+      <footer class="login-footer">
+        <div class="footer-left">
+          <span>IDIOMA:</span>
+          <select class="lang-dropdown" [value]="currentLang" (change)="onLanguageChange($event)">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+          <span class="arrow-down">∨</span>
+        </div>
+        <div class="footer-right">
+          <img src="assets/images/logos/Econocom.svg" alt="Econocom Products & Solutions" class="econocom-logo">
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+</div>
